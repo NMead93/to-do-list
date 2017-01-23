@@ -1,4 +1,8 @@
 // Business Logic
+var counter= 0;
+
+
+
 
 function ToDo(item,urgency,time,where) {
   this.item = item;
@@ -19,12 +23,20 @@ $(document).ready(function() {
 
     var result = new ToDo($("#item").val(), $("#urgency").val(), $("#time").val(), $("#where").val());
 
+    counter++;
 
-    $("#output").append("<a href='#'><li id='title'>" + result.item + "</li>")
-    $("#output").append("<li>" + result.urgency + "</li>")
-    $("#output").append("<li>" + result.time + "</li>")
-    $("#output").append("<li>" + result.where + "</li></a>")
+    $(".output").append("<ul class=" + counter + "></ul>")
+    $("." + counter).append("<li class='test' id='title'>" + result.item + "</li>")
+    $("." + counter).append("<li class='test'>" + result.urgency + "</li>")
+    $("." + counter).append("<li class='test'>" + result.time + "</li>")
+    $("." + counter).append("<li class='test'>" + result.where + "</li>")
 
+    $("ul").click(function() {
+      $(this).remove();
+    });
   });
+
+
+
 
 });
