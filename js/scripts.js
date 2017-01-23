@@ -19,10 +19,11 @@ $(document).ready(function() {
 
     var result = new ToDo($("#item").val(), $("#urgency").val(), $("#time").val(), $("#where").val());
 
-    $("#output").append("<li>" + result.item + "</li>")
+
+    $("#output").append("<a href='#'><li id='title'>" + result.item + "</li>")
     $("#output").append("<li>" + result.urgency + "</li>")
     $("#output").append("<li>" + result.time + "</li>")
-    $("#output").append("<li>" + result.where + "</li>")
+    $("#output").append("<li>" + result.where + "</li></a>")
 
   });
 
