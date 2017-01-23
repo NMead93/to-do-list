@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="js/scripts.js"></script>
+    <title>To Do List</title>
   </head>
   <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>To Do List</h1>
+      </div>
+      <form id="list">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="item">What needs to be done:</label>
+            <input id="item" type="text" class="form-control" name="item" placeholder="Enter here...">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="item">How urgent is this task:</label>
+            <input id="urgency" type="number" class="form-control" name="urgency" placeholder="Enter here...">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="item">Time allotted:</label>
+            <input id="time" type="text" class="form-control" name="timeAllotted" placeholder="Enter here...">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="item">Where is this task to be done:</label>
+            <input id="where" type="number" class="form-control" name="where" placeholder="Enter here...">
+          </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-danger" name="button">Submit</button>
+      </form>
+      <div class="output">
+          <ul id="output">
+
+          </ul>
+      </div>
+
+    </div>
 
   </body>
 </html>
